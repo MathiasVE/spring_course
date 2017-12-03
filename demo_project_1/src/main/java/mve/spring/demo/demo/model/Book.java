@@ -18,6 +18,7 @@ public class Book {
   private Long id;
   private String title;
   private String isbn;
+  private String publisher;
 
   @ManyToMany
   @JoinTable(name = "author_book", joinColumns = @JoinColumn(name="book_id"),
@@ -32,9 +33,16 @@ public class Book {
     this.isbn = isbn;
   }
 
-  public Book(String title, String isbn, Set<Author> authors) {
+  public Book(String title, String isbn, String publisher) {
     this.title = title;
     this.isbn = isbn;
+    this.publisher = publisher;
+  }
+
+  public Book(String title, String isbn, String publisher, Set<Author> authors) {
+    this.title = title;
+    this.isbn = isbn;
+    this.publisher = publisher;
     this.authors = authors;
   }
 
@@ -70,6 +78,14 @@ public class Book {
     this.authors = authors;
   }
 
+  public String getPublisher() {
+    return publisher;
+  }
+
+  public void setPublisher(String publisher) {
+    this.publisher = publisher;
+  }
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -96,6 +112,7 @@ public class Book {
       "id=" + id +
       ", title='" + title + '\'' +
       ", isbn='" + isbn + '\'' +
+      ", publisher='" + publisher + '\'' +
       ", authors=" + authors +
       '}';
   }
