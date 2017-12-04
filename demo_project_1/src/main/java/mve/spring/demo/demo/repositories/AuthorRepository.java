@@ -1,4 +1,4 @@
-package mve.spring.demo.demo.model.repositories;
+package mve.spring.demo.demo.repositories;
 
 import mve.spring.demo.demo.model.Author;
 import org.springframework.data.repository.CrudRepository;

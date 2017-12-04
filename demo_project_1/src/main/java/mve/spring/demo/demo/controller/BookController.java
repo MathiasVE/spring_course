@@ -1,6 +1,6 @@
 package mve.spring.demo.demo.controller;
 
-import mve.spring.demo.demo.model.repositories.BookRepository;
+import mve.spring.demo.demo.repositories.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
