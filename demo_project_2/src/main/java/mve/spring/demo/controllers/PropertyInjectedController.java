@@ -1,9 +1,14 @@
 package mve.spring.demo.controllers;
 
-import mve.spring.demo.services.GreetingServiceImpl;
+import mve.spring.demo.services.GreetingService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
+@Controller
 public class PropertyInjectedController {
-  public GreetingServiceImpl greetingService;
+
+  @Autowired
+  public GreetingService greetingService;
 
   public String sayHello() {
     return greetingService.sayGreeting();
