@@ -9,8 +9,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class AuthorController {
 
-  @Autowired
   private AuthorRepository authorRepository;
+
+  public AuthorController(AuthorRepository authorRepository) {
+    this.authorRepository = authorRepository;
+  }
 
   @RequestMapping("/authors")
   private String getAuthors(Model model) {
