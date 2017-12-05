@@ -1,6 +1,5 @@
 package mve.spring.demo.controllers;
 
-import mve.spring.demo.services.GreetingService;
 import mve.spring.demo.services.GreetingServiceImpl;
 import org.junit.Assert;
 import org.junit.Before;
@@ -12,7 +11,7 @@ public class PropertyInjectedControllerTest {
   @Before
   public void setUp() throws Exception {
     this.propertyInjectedController = new PropertyInjectedController();
-    this.propertyInjectedController.greetingService = new GreetingServiceImpl();
+    this.propertyInjectedController.greetingServiceImpl = new GreetingServiceImpl();
   }
 
   @Test
