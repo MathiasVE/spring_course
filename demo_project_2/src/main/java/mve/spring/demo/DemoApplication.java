@@ -17,6 +17,7 @@ public class DemoApplication {
 		MyController myController = (MyController) ctx.getBean("myController");
 		myController.hello();
 
+		System.out.println(myController.hello());
 		System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
 		System.out.println(ctx.getBean(GetterInjectedController.class).sayHello());
 		System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
