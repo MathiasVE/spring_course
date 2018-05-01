@@ -43,27 +43,26 @@ public class DevBootstrap implements ApplicationListener<ContextRefreshedEvent> 
     categories.add(categoryRepository.findByDescription("Quick and easy").get());
     tacos.setCategories(categories);
 
-    HashSet<Ingredient> ingredients = new HashSet<>();
-    ingredients.add(getIngredient(2, unitOfMeasureRepository.findByDescription("Tablespoon").get(), "ancho chili powder"));
-    ingredients.add(getIngredient(1, unitOfMeasureRepository.findByDescription("Teaspoon").get(), "dried oregano"));
-    ingredients.add(getIngredient(1, unitOfMeasureRepository.findByDescription("Teaspoon").get(), "dried cumin"));
-    ingredients.add(getIngredient(1, unitOfMeasureRepository.findByDescription("Teaspoon").get(), "sugar"));
-    ingredients.add(getIngredient(0.5, unitOfMeasureRepository.findByDescription("Teaspoon").get(), "salt"));
-    ingredients.add(getIngredient(1, unitOfMeasureRepository.findByDescription("Clove").get(), "garlic, finely chopped"));
-    ingredients.add(getIngredient(1, unitOfMeasureRepository.findByDescription("Teaspoon").get(), "finely grated orange zest"));
-    ingredients.add(getIngredient(3, unitOfMeasureRepository.findByDescription("Teaspoon").get(), "fresh-squeezed orange juice"));
-    ingredients.add(getIngredient(2, unitOfMeasureRepository.findByDescription("Teaspoon").get(), "olive oil"));
-    ingredients.add(getIngredient(4, unitOfMeasureRepository.findByDescription("Unit").get(), "skinless, boneless chicken thighs"));
-    ingredients.add(getIngredient(8, unitOfMeasureRepository.findByDescription("Unit").get(), "small corn tortillas"));
-    ingredients.add(getIngredient(3, unitOfMeasureRepository.findByDescription("Cup").get(), "packed baby arugula"));
-    ingredients.add(getIngredient(2, unitOfMeasureRepository.findByDescription("Unit").get(), "medium ripe avocados, sliced"));
-    ingredients.add(getIngredient(4, unitOfMeasureRepository.findByDescription("Pint").get(), "cherry tomatoes, halved"));
-    ingredients.add(getIngredient(0.5, unitOfMeasureRepository.findByDescription("Unit").get(), "red onion, thinly sliced"));
-    ingredients.add(getIngredient(0.25, unitOfMeasureRepository.findByDescription("Unit").get(), "skinless, boneless chicken thighs"));
-    ingredients.add(getIngredient(1, unitOfMeasureRepository.findByDescription("Unit").get(), "Roughly chopped cilantro"));
-    ingredients.add(getIngredient(0.5, unitOfMeasureRepository.findByDescription("Cup").get(), "sour cream"));
-    ingredients.add(getIngredient(1, unitOfMeasureRepository.findByDescription("Unit").get(), "lime, cut into wedges"));
-    tacos.setIngredients(ingredients);
+    tacos.setIngredients(new HashSet<>());
+    tacos.addIngredient(getIngredient(2, unitOfMeasureRepository.findByDescription("Tablespoon").get(), "ancho chili powder"));
+    tacos.addIngredient(getIngredient(1, unitOfMeasureRepository.findByDescription("Teaspoon").get(), "dried oregano"));
+    tacos.addIngredient(getIngredient(1, unitOfMeasureRepository.findByDescription("Teaspoon").get(), "dried cumin"));
+    tacos.addIngredient(getIngredient(1, unitOfMeasureRepository.findByDescription("Teaspoon").get(), "sugar"));
+    tacos.addIngredient(getIngredient(0.5, unitOfMeasureRepository.findByDescription("Teaspoon").get(), "salt"));
+    tacos.addIngredient(getIngredient(1, unitOfMeasureRepository.findByDescription("Clove").get(), "garlic, finely chopped"));
+    tacos.addIngredient(getIngredient(1, unitOfMeasureRepository.findByDescription("Teaspoon").get(), "finely grated orange zest"));
+    tacos.addIngredient(getIngredient(3, unitOfMeasureRepository.findByDescription("Teaspoon").get(), "fresh-squeezed orange juice"));
+    tacos.addIngredient(getIngredient(2, unitOfMeasureRepository.findByDescription("Teaspoon").get(), "olive oil"));
+    tacos.addIngredient(getIngredient(4, unitOfMeasureRepository.findByDescription("Unit").get(), "skinless, boneless chicken thighs"));
+    tacos.addIngredient(getIngredient(8, unitOfMeasureRepository.findByDescription("Unit").get(), "small corn tortillas"));
+    tacos.addIngredient(getIngredient(3, unitOfMeasureRepository.findByDescription("Cup").get(), "packed baby arugula"));
+    tacos.addIngredient(getIngredient(2, unitOfMeasureRepository.findByDescription("Unit").get(), "medium ripe avocados, sliced"));
+    tacos.addIngredient(getIngredient(4, unitOfMeasureRepository.findByDescription("Pint").get(), "cherry tomatoes, halved"));
+    tacos.addIngredient(getIngredient(0.5, unitOfMeasureRepository.findByDescription("Unit").get(), "red onion, thinly sliced"));
+    tacos.addIngredient(getIngredient(0.25, unitOfMeasureRepository.findByDescription("Unit").get(), "skinless, boneless chicken thighs"));
+    tacos.addIngredient(getIngredient(1, unitOfMeasureRepository.findByDescription("Unit").get(), "Roughly chopped cilantro"));
+    tacos.addIngredient(getIngredient(0.5, unitOfMeasureRepository.findByDescription("Cup").get(), "sour cream"));
+    tacos.addIngredient(getIngredient(1, unitOfMeasureRepository.findByDescription("Unit").get(), "lime, cut into wedges"));
     tacos.setDescription("Spicy Grilled Chicken Tacos");
     tacos.setCookTime(30);
     tacos.setDifficulty(Difficulty.EASY);
@@ -81,16 +80,15 @@ public class DevBootstrap implements ApplicationListener<ContextRefreshedEvent> 
     categories.add(categoryRepository.findByDescription("Avocado").get());
     guacamole.setCategories(categories);
 
-    HashSet<Ingredient> ingredients = new HashSet<>();
-    ingredients.add(getIngredient(2, unitOfMeasureRepository.findByDescription("Unit").get(), "ripe advocados"));
-    ingredients.add(getIngredient(0.5, unitOfMeasureRepository.findByDescription("Teaspoon").get(), "Kosher salt"));
-    ingredients.add(getIngredient(1, unitOfMeasureRepository.findByDescription("Tablespoon").get(), "Fresh lime juice or lemon juice"));
-    ingredients.add(getIngredient(2, unitOfMeasureRepository.findByDescription("Tablespoon").get(), "ripe advocados"));
-    ingredients.add(getIngredient(1, unitOfMeasureRepository.findByDescription("Unit").get(), "serano chiles, stems ad seeds removed, minced"));
-    ingredients.add(getIngredient(2, unitOfMeasureRepository.findByDescription("Unit").get(), "chilantro"));
-    ingredients.add(getIngredient(1, unitOfMeasureRepository.findByDescription("Pinch").get(), "freshly grated black pepper"));
-    ingredients.add(getIngredient(0.5, unitOfMeasureRepository.findByDescription("Unit").get(), "ripe tomato, seeds and pulp removed, chopped"));
-    guacamole.setIngredients(ingredients);
+    guacamole.setIngredients(new HashSet<>());
+    guacamole.addIngredient(getIngredient(2, unitOfMeasureRepository.findByDescription("Unit").get(), "ripe advocados"));
+    guacamole.addIngredient(getIngredient(0.5, unitOfMeasureRepository.findByDescription("Teaspoon").get(), "Kosher salt"));
+    guacamole.addIngredient(getIngredient(1, unitOfMeasureRepository.findByDescription("Tablespoon").get(), "Fresh lime juice or lemon juice"));
+    guacamole.addIngredient(getIngredient(2, unitOfMeasureRepository.findByDescription("Tablespoon").get(), "ripe advocados"));
+    guacamole.addIngredient(getIngredient(1, unitOfMeasureRepository.findByDescription("Unit").get(), "serano chiles, stems ad seeds removed, minced"));
+    guacamole.addIngredient(getIngredient(2, unitOfMeasureRepository.findByDescription("Unit").get(), "chilantro"));
+    guacamole.addIngredient(getIngredient(1, unitOfMeasureRepository.findByDescription("Pinch").get(), "freshly grated black pepper"));
+    guacamole.addIngredient(getIngredient(0.5, unitOfMeasureRepository.findByDescription("Unit").get(), "ripe tomato, seeds and pulp removed, chopped"));
     guacamole.setDescription("Perfect guacamole");
     guacamole.setCookTime(10);
     guacamole.setDifficulty(Difficulty.EASY);
@@ -100,11 +98,7 @@ public class DevBootstrap implements ApplicationListener<ContextRefreshedEvent> 
   }
 
   private static Ingredient getIngredient(double amount, UnitOfMeasure unitOfMeasure, String description) {
-    Ingredient ingredient = new Ingredient();
-    ingredient.setAmount(BigDecimal.valueOf(amount));
-    ingredient.setDescription(description);
-    ingredient.setUnitOfMeasure(unitOfMeasure);
-    return ingredient;
+    return new Ingredient(description, BigDecimal.valueOf(amount), unitOfMeasure);
   }
 
   @Override
