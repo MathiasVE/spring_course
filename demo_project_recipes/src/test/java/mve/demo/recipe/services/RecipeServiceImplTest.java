@@ -8,6 +8,7 @@ import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
+import org.springframework.ui.Model;
 
 import java.util.HashSet;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -42,6 +43,6 @@ public class RecipeServiceImplTest {
     AtomicInteger recipeCount = new AtomicInteger();
     recipes.forEach(r -> recipeCount.getAndIncrement());
     assertEquals(recipeCount.get(), 1);
-    verify(recipeRepository, times(1));
+    verify(recipeRepository, times(1)).findAll();
   }
 }
