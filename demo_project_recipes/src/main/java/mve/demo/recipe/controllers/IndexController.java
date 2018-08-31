@@ -1,7 +1,6 @@
 package mve.demo.recipe.controllers;
 
 import mve.demo.recipe.services.RecipeService;
-import mve.demo.recipe.services.RecipeServiceImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,7 +10,7 @@ public class IndexController {
 
   private RecipeService recipeService;
 
-  public IndexController(RecipeServiceImpl recipeService) {
+  public IndexController(RecipeService recipeService) {
     this.recipeService = recipeService;
   }
 
