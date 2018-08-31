@@ -38,9 +38,9 @@ public class IndexControllerTest {
     recipeData.add(recipe);
     when(recipeService.getRecipes()).thenReturn(recipeData);
 
-
     String index = indexController.getIndexPage(model);
     assertEquals(index, "index");
+    verify(recipeService, times(1)).getRecipes();
     verify(model, times(1)).addAttribute("recipes", recipeData);
   }
 }
